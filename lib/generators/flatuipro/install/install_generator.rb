@@ -17,7 +17,7 @@ module Flatuipro
             raise "Invalid Flat UI Pro directory"
           end
         end
-        gem_assets_dir = File.expand_path("../../../../../vendor/assets", __FILE__)
+        gem_assets_dir = File.expand_path("../../../../../app/assets", __FILE__)
 
         if use_less?
           directory File.join(flatuipro_dir, "less"), File.join(gem_assets_dir, "less")
@@ -78,7 +78,7 @@ module Flatuipro
       end
 
       def patch_assets
-        gem_assets_dir = File.expand_path("../../../../../vendor/assets", __FILE__)
+        gem_assets_dir = File.expand_path("../../../../../app/assets", __FILE__)
 
         # Stylesheets patches
         # image url() -> image-url()
