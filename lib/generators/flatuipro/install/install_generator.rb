@@ -88,6 +88,7 @@ module Flatuipro
           # Should use image-url() here, but less-rails won't translate when inside ~""
           gsub_file File.join(gem_assets_dir, "less/modules", "switch.less"), /url\('\.\.\/images\//, "url('/assets/"
           gsub_file File.join(gem_assets_dir, "less", "icon-font.less"), /url\("\.\.\/fonts\//, 'font-url("'
+          gsub_file File.join(gem_assets_dir, "less", "flat-ui.less"), /url\("\.\.\/fonts\//, 'font-url("'
         # CSS
         else
           gsub_file "app/assets/stylesheets/flat-ui.css", /url\('\.\.\/images\//, "url('/assets/"
